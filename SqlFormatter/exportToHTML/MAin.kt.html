@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>MAin.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #080808;}
+.s1 { color: #0033b3;}
+.s2 { color: #067d17;}
+.s3 { color: #8c8c8c; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MAin.kt</font>
+</center></td></tr></table>
+<pre>
+
+
+
+    <span class="s1">fun </span><span class="s0">main(args: Array&lt;String&gt;) {</span>
+
+        <span class="s1">var </span><span class="s0">st = </span><span class="s2">&quot;&quot;</span>
+        <span class="s1">while </span><span class="s0">(!st.contains(</span><span class="s2">&quot;exit&quot;</span><span class="s0">) &amp;&amp; !st.contains(</span><span class="s2">&quot;EXIT&quot;</span><span class="s0">)) {</span>
+            <span class="s0">st += </span><span class="s2">&quot; &quot; </span><span class="s0">+ readLine()!!</span>
+
+        <span class="s0">}</span>
+        <span class="s1">val </span><span class="s0">formatter = Formatter()</span>
+        <span class="s1">val </span><span class="s0">sqlst: String = formatter.format(st.replace(</span><span class="s2">&quot;exit&quot;</span><span class="s0">, </span><span class="s2">&quot;&quot;</span><span class="s0">).replace(</span><span class="s2">&quot;EXIT&quot;</span><span class="s0">,</span><span class="s2">&quot;&quot;</span><span class="s0">))</span>
+        <span class="s0">println(sqlst)</span>
+    <span class="s0">}</span>
+
+<span class="s3">/* 
+SELECT supplier_name, city  FROM suppliers inner        JOIN 
+contacts WHERE supplier_id &gt; 500 and x=2 or (m &gt;=8) ORDER BY supplier_name ASC, 
+city DESC;SELECT supplier_name, city  fROM suppliers NATURAL LEFT OUTER JOIN contacts WHERE supplier_id &lt;&gt; 500 and x = 2 
+exit 
+ 
+d = 9 or x      &lt; 6 
+ 
+update a set a.ID = b.ID, Name = b.Name from Table1 a 
+inner join (select ID, Name from Table2 where Active &lt;&gt; 0 and Current &lt;&gt; 0)  b 
+on a.ownerid = b.ownerid and a.type = b.type and b.version = '87.1' 
+and a.Name is Null where a.expired &lt;&gt; 0 
+EXIT 
+ 
+* */</span></pre>
+</body>
+</html>
